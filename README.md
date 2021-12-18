@@ -14,6 +14,9 @@ It should write some HTML codes on your screen:
 
 	curl -x http://127.0.0.1:8090/ -L http://ce.sharif.edu
 
+# Use Proxy
+You can add 127.0.0.1:8090 as your HTTP Proxy in Proxy Settings.
+
 # Execute Managment Commands
 ## Connect to Management Port
 	telnet 127.0.0.1 8091
