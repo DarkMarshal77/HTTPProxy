@@ -117,11 +117,11 @@ void Management::sort_host_count(vector<pair<string, uint32_t>>& A)
 void Management::packet_len_stats(int fd)
 {
     pthread_mutex_lock(&this->management_lock);
-    dprintf(fd, "Packet length received from server(mean, std): (%f, %f)\n",
+    dprintf(fd, "Packet length received from servers(mean, std): (%f, %f)\n",
             this->server_pkt_len.Mean(), this->server_pkt_len.StandardDeviation());
-    dprintf(fd, "Packet length received from client(mean, std): (%f, %f)\n",
+    dprintf(fd, "Packet length received from clients(mean, std): (%f, %f)\n",
             this->client_pkt_len.Mean(), this->client_pkt_len.StandardDeviation());
-    dprintf(fd, "Body length received from server(mean, std): (%f, %f)\n",
+    dprintf(fd, "Body length received from servers(mean, std): (%f, %f)\n",
             this->server_bd_len.Mean(), this->server_bd_len.StandardDeviation());
     pthread_mutex_unlock(&this->management_lock);
 }
